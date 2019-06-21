@@ -9,12 +9,12 @@
         <div class="teacher-msg">
           <p>{{config.teacher.name}}</p>
           <p>{{config.teacher.job}}</p>
-        </div> 
+        </div>
       </div>
     </card>
     <card>
       <div class="class-need">
-        <p class="need-title">课程须知</p>
+        <p class="need-title">课程须知, 请按时遵守</p>
         <p v-for="(item, index) in config.classNeed" :key="index">{{item}}</p>
         <p class="need-title">老师告诉你能学到什么?</p>
         <p v-for="(item, index) in config.gain" :key="index + 's'">{{item}}</p>
