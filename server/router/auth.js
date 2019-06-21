@@ -25,12 +25,10 @@ const auth = async (ctx) => {
           if (err) {
             throw err
           }
-
           if (rows.length) {
             resolve(true)
             return
           }
-
           return reject(false)
         })
     })
