@@ -1,12 +1,12 @@
-const Router = require('koa-router') 
+const Router = require('koa-router')
 const {session} = require('../utils/session')
 const router = new Router()
 
 const _reponseBody = (status) => {
   return {
     status,
-    msg: status ? '用户登录成功' : '用户登录失败' 
-  }  
+    msg: status ? '用户登录成功' : '用户登录失败 2019-06-21'
+  }
 }
 
 const auth = async (ctx) => {
@@ -14,23 +14,23 @@ const auth = async (ctx) => {
   let status = false
   if (await session.judgeSession(ctx)){
     ctx.response.body = _reponseBody(true)
-    return 
+    return
   }
 
   function query () {
     return new Promise((resolve, reject) => {
       mysql.query(
-        `SELECT username, passwd from user_profile_user WHERE username='${username}' and passwd='${password}'`, 
+        `SELECT username, passwd from user_profile_user WHERE username='${username}' and passwd='${password}'`,
         (err, rows) => {
           if (err) {
             throw err
           }
-  
+
           if (rows.length) {
             resolve(true)
             return
-          } 
-          
+          }
+
           return reject(false)
         })
     })
