@@ -5,7 +5,7 @@ const router = new Router()
 const _reponseBody = (status) => {
   return {
     status,
-    msg: status ? '用户登录成功' : '用户登录失败 2019-06-09'
+    msg: status ? '用户登录成功' : '用户登录失败 2019-06-21'
   }
 }
 
