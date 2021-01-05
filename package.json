@@ -13,7 +13,7 @@
     "server": "nodemon ./server/app.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "client-sessions": "^0.8.0",
     "is-generator-function": "^1.0.7",
     "koa": "^2.5.1",
